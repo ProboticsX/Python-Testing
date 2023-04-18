@@ -6,3 +6,7 @@ def test_login(param_setup):
 @pytest.mark.skipif(sys.version_info < (3,3),reason="requires python4.3")
 def test_logout():
     print("Logout Success!")
+
+@pytest.mark.parametrize("a,b,sum",[(2,3,5),(2,3,8)])
+def test_sum(a,b,sum):
+    assert a+b==sum
